@@ -17,6 +17,7 @@ if exists("g:loaded_linuxsty")
     finish
 endif
 let g:loaded_linuxsty = 1
+let g:applied_linuxsty = 0
 
 set wildignore+=*.ko,*.mod.c,*.order,modules.builtin
 
@@ -53,6 +54,7 @@ function! s:LinuxCodingStyle()
     call s:LinuxFormatting()
     call s:LinuxKeywords()
     call s:LinuxHighlighting()
+    let g:applied_linuxsty = 1
 endfunction
 
 function s:LinuxFormatting()
